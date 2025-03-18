@@ -1,47 +1,49 @@
 <x-app-layout>
-
     <x-slot name="header">
         <h2 class="font-semibold text-xl leading-tight">
             {{ __('Home page') }}
         </h2>
     </x-slot>
 
-
     <article class="-mx-4">
         <header class="bg-zinc-700 text-zinc-200 rounded-t-lg -mx-4 -mt-8 p-8 text-2xl font-bold mb-8">
-            <h2>Welcome</h2>
-            <p class="text-sm">{{ now() }}</p>
+            <h2>Welcome{{ Auth::check() ? ', ' . (Auth::user()->preferred_name ?? Auth::user()->given_name) : '' }}</h2>
+            <p class="text-sm">{{ now()->format('l, F jS Y') }}</p>
         </header>
 
         <div class="flex flex-col flex-wrap my-4 mt-8">
-            <section class="grid grid-cols-1 gap-4 px-4 mt-4 sm:grid-cols-3 sm:px-8">
-
-                <section class="rounded flex items-center bg-lime-200 border border-lime-600 overflow-hidden">
-                    <div class="rounded-l p-6 bg-lime-600 text-center">
-                        <i class="fa-solid fa-users text-5xl min-w-24 text-white"></i>
+            @auth
+                <!-- Recent Activity Section -->
+                <section class="px-4 mt-8 sm:px-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Recent Activity</h3>
+                        <div class="space-y-4">
+                            <!-- Activity items would go here -->
+                            <div class="text-gray-500 text-sm">No recent activity</div>
+                        </div>
                     </div>
                 </section>
-
-                <section class="flex items-center bg-amber-200 border border-amber-600 rounded overflow-hidden">
-                    <div class="rounded-l p-6 bg-amber-600 text-center">
-                        <i class="fa-solid fa-table-list text-5xl min-w-24 text-white"></i>
+            @else
+                <!-- Guest Landing Content -->
+                <section class="text-center py-12 px-4 sm:px-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-6">
+                        Welcome to Class Roster Manager
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Streamline your classroom management with visual student rosters
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="{{ route('login') }}"
+                           class="bg-zinc-700 text-white px-6 py-3 rounded-lg hover:bg-zinc-800 transition-colors">
+                            Login
+                        </a>
+                        <a href="{{ route('register') }}"
+                           class="bg-zinc-200 text-zinc-800 px-6 py-3 rounded-lg hover:bg-zinc-300 transition-colors">
+                            Register
+                        </a>
                     </div>
-
                 </section>
-
-                <section class="flex items-center bg-indigo-200 border border-indigo-600 rounded overflow-hidden">
-                    <div class="rounded-l p-6 bg-indigo-600 text-center">
-                        <i class="fa-solid fa-comments text-5xl min-w-24 text-white"></i>
-                    </div>
-
-                </section>
-
-
-            </section>
-
-
+            @endauth
         </div>
-
     </article>
-
 </x-app-layout>
