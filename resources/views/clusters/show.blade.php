@@ -14,17 +14,20 @@
                            class="text-blue-600 hover:underline">&larr; Back to Clusters</a>
                     </div>
 
+                    <!-- Code -->
                     <dl class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div class="sm:col-span-1">
                             <dt class="text-sm font-medium text-gray-500">Code</dt>
                             <dd class="mt-1 text-sm text-gray-900">{{ $cluster->code }}</dd>
                         </div>
 
+                        <!-- Title -->
                         <div class="sm:col-span-1">
                             <dt class="text-sm font-medium text-gray-500">Title</dt>
                             <dd class="mt-1 text-sm text-gray-900">{{ $cluster->title }}</dd>
                         </div>
 
+                        <!-- Course Selection -->
                         <div class="sm:col-span-1">
                             <dt class="text-sm font-medium text-gray-500">Course</dt>
                             <dd class="mt-1 text-sm text-gray-900">
@@ -32,11 +35,13 @@
                             </dd>
                         </div>
 
+                        <!-- State Code -->
                         <div class="sm:col-span-1">
                             <dt class="text-sm font-medium text-gray-500">State Code</dt>
                             <dd class="mt-1 text-sm text-gray-900">{{ $cluster->state_code }}</dd>
                         </div>
 
+                        <!-- Units Selection -->
                         <div class="sm:col-span-2">
                             <dt class="text-sm font-medium text-gray-500">Units</dt>
                             <dd class="mt-1 text-sm text-gray-900">
@@ -49,6 +54,7 @@
                         </div>
                     </dl>
 
+                    <!-- Form Actions -->
                     <div class="mt-6 flex gap-4">
                         <a href="{{ route('clusters.edit', $cluster) }}"
                            class="inline-flex items-center px-4 py-2 bg-yellow-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-yellow-600">

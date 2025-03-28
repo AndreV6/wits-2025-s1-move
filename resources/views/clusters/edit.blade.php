@@ -17,6 +17,7 @@
                         @csrf
                         @method('PATCH')
 
+                        <!-- Code -->
                         <div>
                             <x-input-label for="code" :value="__('Code')" />
                             <x-text-input id="code" name="code" type="text" class="mt-1 block w-full"
@@ -24,6 +25,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('code')" />
                         </div>
 
+                        <!-- Title -->
                         <div>
                             <x-input-label for="title" :value="__('Title')" />
                             <x-text-input id="title" name="title" type="text" class="mt-1 block w-full"
@@ -31,6 +33,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('title')" />
                         </div>
 
+                        <!-- Course Selection -->
                         <div>
                             <x-input-label for="course_id" :value="__('Course')" />
                             <select id="course_id" name="course_id" class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
@@ -43,6 +46,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('course_id')" />
                         </div>
 
+                        <!-- State Code -->
                         <div>
                             <x-input-label for="state_code" :value="__('State Code')" />
                             <x-text-input id="state_code" name="state_code" type="text" class="mt-1 block w-full"
@@ -50,6 +54,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('state_code')" />
                         </div>
 
+                        <!-- Units Selection -->
                         <div>
                             <x-input-label :value="__('Units')" />
                             <div class="mt-2 space-y-2">
@@ -65,6 +70,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('units')" />
                         </div>
 
+                        <!-- Form Actions -->
                         <div class="flex items-center gap-4">
                             <x-primary-button>{{ __('Save Changes') }}</x-primary-button>
                             <a href="{{ route('clusters.show', $cluster) }}"
