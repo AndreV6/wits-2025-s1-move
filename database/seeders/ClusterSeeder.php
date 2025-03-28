@@ -12,188 +12,161 @@ class ClusterSeeder extends Seeder
 {
     public function run()
     {
-        // Clear existing data
-        DB::table('cluster_unit')->truncate();
-        Cluster::truncate();
 
         $clusters = [
             [
-                'Code' => 'ADVPROG',
-                'Title' => 'Advanced Programming',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTPRG535', 'ICTPRG547']
+                'code' => 'ADVPROG',
+                'title' => 'Advanced Programming',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'INTERIOT',
-                'Title' => 'Intermediate IoT',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTPRG537', 'ICTIOT502', 'ICTIOT503']
+                'code' => 'INTERIOT',
+                'title' => 'Intermediate IoT',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'INTROPROG',
-                'Title' => 'Introduction to Programming',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTPRG302']
+                'code' => 'INTROPROG',
+                'title' => 'Introduction to Programming',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'IP4RIoT',
-                'Title' => 'Introduction to Programming for IoT',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTPRG430', 'ICTICT449']
+                'code' => 'IP4RIoT',
+                'title' => 'Introduction to Programming for IoT',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'IPOS',
-                'Title' => 'Intermediate Programming and Open Source',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTPRG429', 'ICTPRG443', 'ICTPRG439']
+                'code' => 'IPOS',
+                'title' => 'Intermediate Programming and Open Source',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'MOBDEV',
-                'Title' => 'Introduction to Mobile Development',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => []
+                'code' => 'MOBDEV',
+                'title' => 'Introduction to Mobile Development',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'SAAS-FED',
-                'Title' => 'Software as a Service - Front End Development',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTDBS507', 'ICTPRG556']
+                'code' => 'SAAS-FED',
+                'title' => 'Software as a Service - Front End Development',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'ADVMOB',
-                'Title' => 'Advanced Mobile Development',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTPRG603', 'ICTPRG549']
+                'code' => 'ADVMOB',
+                'title' => 'Advanced Mobile Development',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'SAAS-BED',
-                'Title' => 'Software as a Service - Back End Development',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTPRG553', 'ICTPRG554']
+                'code' => 'SAAS-BED',
+                'title' => 'Software as a Service - Back End Development',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'CYBAWD',
-                'Title' => 'Cyber Awareness',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['BSBXCS402']
+                'code' => 'CYBAWD',
+                'title' => 'Cyber Awareness',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'BIGDAT',
-                'Title' => 'Big Data',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTDAT503', 'ICTDAT501', 'BSBDAT501', 'ICTDAT503']
+                'code' => 'BIGDAT',
+                'title' => 'Big Data',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'INNOPRJ1',
-                'Title' => 'Innovation Project (Part 1)',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['BSBCRT512', 'ICTICT517']
+                'code' => 'INNOPRJ1',
+                'title' => 'Innovation Project (Part 1)',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'INNOPRJ2',
-                'Title' => 'Innovation Project (Part 2)',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['BSBXTW401', 'ICTSAS527']
+                'code' => 'INNOPRJ2',
+                'title' => 'Innovation Project (Part 2)',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'IPETHPD',
-                'Title' => 'IP, Ethics & Privacy',
-                'Qualification' => 'ICT50220',
-                'StateCode' => 'AC21',
-                'Units' => ['ICTICT532']
+                'code' => 'IPETHPD',
+                'title' => 'IP, Ethics & Privacy',
+                'qualification' => 'ICT50220',
+                'state_code' => 'AC21'
             ],
             [
-                'Code' => 'PROGC',
-                'Title' => 'Programming in another language (C#)',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTPRG440', 'ICTPRG433']
+                'code' => 'PROGC',
+                'title' => 'Programming in another language (C#)',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'CYBSECR',
-                'Title' => 'Cyber Security Risk Management',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['BSBXCS404']
+                'code' => 'CYBSECR',
+                'title' => 'Cyber Security Risk Management',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'ICTPROB',
-                'Title' => 'IT Support (Software)',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTSAS432']
+                'code' => 'ICTPROB',
+                'title' => 'IT Support (Software)',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'COMPIP',
-                'Title' => 'Comply with IP, ethics and privacy policies in ICT environments',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTICT451']
+                'code' => 'COMPIP',
+                'title' => 'Comply with IP, ethics and privacy policies in ICT environments',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'INNOPRO0',
-                'Title' => 'Innovation Project',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['BSBCRT404', 'ICTICT443', 'ICTICT426']
+                'code' => 'INNOPRO0',
+                'title' => 'Innovation Project',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'APPYTHON',
-                'Title' => 'Applied Python Programming',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTPRG429', 'ICTPRG443', 'ICTPRG439']
+                'code' => 'APPYTHON',
+                'title' => 'Applied Python Programming',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'MOBDEV',
-                'Title' => 'Mobile Development (C#/Xamarin)',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTPRG437', 'ICTPRG436']
+                'code' => 'MOBDEV',
+                'title' => 'Mobile Development (C#/Xamarin)',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
             [
-                'Code' => 'WEBTECHP',
-                'Title' => 'Web Technologies (HTML, CSS and JS)',
-                'Qualification' => 'ICT40120',
-                'StateCode' => 'AC07',
-                'Units' => ['ICTWEB441', 'ICTWEB452']
+                'code' => 'WEBTECHP',
+                'title' => 'Web Technologies (HTML, CSS and JS)',
+                'qualification' => 'ICT40120',
+                'state_code' => 'AC07'
             ],
         ];
 
         foreach ($clusters as $clusterData) {
-            // Skip invalid entries
-            if (empty($clusterData['Code'])) continue;
+            // 1. Get course using qualification
+            $course = Course::where('national_code', $clusterData['qualification'])->first();
+
+            if (!$course) {
+                $this->command->error("Missing course: {$clusterData['qualification']}");
+                continue;
+            }
 
             $cluster = Cluster::create([
-                'code' => $clusterData['Code'],
-                'title' => $clusterData['Title'],
-                'qualification' => $clusterData['Qualification'],
-                'state_code' => $clusterData['StateCode'],
-                'course_id' => $this->getCourseId($clusterData['Qualification'])
+                'code' => $clusterData['code'],
+                'title' => $clusterData['title'],
+                'qualification' => $clusterData['qualification'],
+                'state_code' => $clusterData['state_code'],
+                'course_id' => $this->getCourseId($clusterData['qualification'])
             ]);
-
-            // Attach units after removing duplicates
-            $unitIds = [];
-            foreach ($clusterData['Units'] as $unitCode) {
-                if ($unit = Unit::where('national_code', trim($unitCode))->first()) {
-                    $unitIds[] = $unit->id;
-                }
-            }
-            $cluster->units()->attach(array_unique($unitIds));
         }
+
+
     }
 
     private function getCourseId($qualification)
@@ -207,4 +180,6 @@ class ClusterSeeder extends Seeder
 
         return $course->id;
     }
+
+
 }
